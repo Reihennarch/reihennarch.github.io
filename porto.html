@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Honey | Arch-Inspired Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'JetBrains Mono', monospace;
+      background: #0f1015;
+      color: #d8dee9;
+      overflow-x: hidden;
+      overflow-y: auto;
+    }
+
+    canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .content {
+      position: relative;
+      z-index: 10;
+    }
+
+    /* subtle fade for sections */
+    section {
+      backdrop-filter: blur(6px);
+      background-color: rgba(16, 18, 26, 0.7);
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col items-center py-10">
+
+  <!-- Canvas Background -->
+  <canvas id="matrix"></canvas>
+
+  <div class="content w-full flex flex-col items-center">
+
+    <!-- Profile -->
+    <section class="w-full max-w-3xl text-center mb-12 rounded-xl border border-[#1793d1]/40 p-6">
+      <div class="flex flex-col items-center space-y-4">
+        <img src="pp.jpg" alt="Profile" class="w-32 h-32 rounded-full border-2 border-[#1793d1] object-cover">
+        <h1 class="text-3xl font-semibold text-[#1793d1]">Reihenarch</h1>
+        <p class="text-sm text-gray-400">Programmer | Digital & Traditional Artist | Story-Maker | Web-Designer</p>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="w-full max-w-3xl border border-[#1793d1]/40 rounded-xl p-6 mb-8">
+      <h2 class="text-[#1793d1] text-lg mb-3">$ whoami</h2>
+      <p class="text-gray-300 leading-relaxed">
+        Hello, I’m Reihenarch — a creative developer and artist who enjoys building worlds,
+        designing interfaces, and exploring the boundaries between art and code.
+      </p>
+    </section>
+
+    <!-- Skills -->
+    <section class="w-full max-w-3xl border border-[#1793d1]/40 rounded-xl p-6 mb-8">
+      <h2 class="text-[#1793d1] text-lg mb-3">$ pacman -Q skills</h2>
+      <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 text-gray-300">
+        <div class="bg-[#161821]/70 rounded-lg p-2 text-center">HTML</div>
+        <div class="bg-[#161821]/70 rounded-lg p-2 text-center">CSS / Tailwind</div>
+        <div class="bg-[#161821]/70 rounded-lg p-2 text-center">JavaScript</div>
+        <div class="bg-[#161821]/70 rounded-lg p-2 text-center">Python</div>
+        <div class="bg-[#161821]/70 rounded-lg p-2 text-center">Art & Illustration</div>
+        <div class="bg-[#161821]/70 rounded-lg p-2 text-center">Story Design</div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="w-full max-w-3xl border border-[#1793d1]/40 rounded-xl p-6 mb-8">
+      <h2 class="text-[#1793d1] text-lg mb-3">$ ls ~/projects</h2>
+      <div class="grid sm:grid-cols-2 gap-4">
+        <div class="bg-[#161821]/70 rounded-lg p-4 text-gray-300">
+          <h3 class="text-[#1793d1] font-semibold mb-2">Retro Dashboard</h3>
+          <p class="text-sm text-gray-400">Whatever.</p>
+        </div>
+        <div class="bg-[#161821]/70 rounded-lg p-4 text-gray-300">
+          <h3 class="text-[#1793d1] font-semibold mb-2">Alternate History Series</h3>
+          <p class="text-sm text-gray-400">Indeddd.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="w-full max-w-3xl border border-[#1793d1]/40 rounded-xl p-6">
+      <h2 class="text-[#1793d1] text-lg mb-3">$ echo "Contact me"</h2>
+      <p class="text-gray-300">📧 <a href="#" class="text-[#1793d1] hover:underline">ahmadafa777.email@example.com</a></p>
+      <p class="text-gray-300 mt-2">🌐 <a href="#" class="text-[#1793d1] hover:underline">Nogithub </a></p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="mt-10 text-gray-500 text-sm">
+      <p>Honey@arch:~$ exit</p>
+    </footer>
+
+  </div>
+
+  <!-- Matrix Rain JavaScript -->
+  <script>
+    const canvas = document.getElementById('matrix');
+    const ctx = canvas.getContext('2d');
+
+    canvas.height = window.innerHeight;
+    canvas.width = window.innerWidth;
+
+    const chinese = "日月金木水火土天地玄黃宇宙洪荒龍虎雲風山川海洋";
+    const fontSize = 16;
+    const columns = canvas.width / fontSize;
+    const drops = Array(Math.floor(columns)).fill(1);
+
+    function draw() {
+      // Semi-transparent background to create trail
+      ctx.fillStyle = "rgba(0, 0, 0, 0.1)";
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      ctx.fillStyle = "#1793d1";
+      ctx.font = fontSize + "px monospace";
+
+      for (let i = 0; i < drops.length; i++) {
+        const text = chinese.charAt(Math.floor(Math.random() * chinese.length));
+        ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+        // Reset drop randomly after it goes off-screen
+        if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+          drops[i] = 0;
+        }
+        drops[i]++;
+      }
+    }
+
+    setInterval(draw, 40);
+
+    // Handle window resizing
+    window.addEventListener('resize', () => {
+      canvas.height = window.innerHeight;
+      canvas.width = window.innerWidth;
+    });
+  </script>
+
+</body>
+</html>
