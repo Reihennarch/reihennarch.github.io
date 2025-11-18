@@ -1,151 +1,152 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Honey | Arch-Inspired Portfolio</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'JetBrains Mono', monospace;
-      background: #0f1015;
-      color: #d8dee9;
-      overflow-x: hidden;
-      overflow-y: auto;
-    }
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reinnar Inc</title>
+    <link rel="stylesheet" type="text/css" href="site F-BG.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Leckerli+One&family=Ma+Shan+Zheng&family=Mr+Dafoe&family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Zhi+Mang+Xing&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playwrite+HU:wght@100..400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playwrite+HU:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  </head>
 
-    canvas {
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: 0;
-      width: 100%;
-      height: 100%;
-    }
-
-    .content {
-      position: relative;
-      z-index: 10;
-    }
-
-    /* subtle fade for sections */
-    section {
-      backdrop-filter: blur(6px);
-      background-color: rgba(16, 18, 26, 0.7);
-    }
-  </style>
-</head>
-<body class="min-h-screen flex flex-col items-center py-10">
-
-  <!-- Canvas Background -->
-  <canvas id="matrix"></canvas>
-
-  <div class="content w-full flex flex-col items-center">
-
-    <!-- Profile -->
-    <section class="w-full max-w-3xl text-center mb-12 rounded-xl border border-[#1793d1]/40 p-6">
-      <div class="flex flex-col items-center space-y-4">
-        <img src="./pp.jpg" alt="Profile" class="w-32 h-32 rounded-full border-2 border-[#1793d1] object-cover">
-        <h1 class="text-3xl font-semibold text-[#1793d1]">Reihenarch</h1>
-        <p class="text-sm text-gray-400">Programmer | Digital & Traditional Artist | Story-Maker | Web-Designer</p>
+  <body>
+    <nav class="A">
+      <div class="logo1">
+        <h4>右</h4>
+        <p>Reinnar Inc</p>
       </div>
-    </section>
+      <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+      </ul>
+      <div class="contact1">More...</div>
+    </nav>
 
-    <!-- About -->
-    <section class="w-full max-w-3xl border border-[#1793d1]/40 rounded-xl p-6 mb-8">
-      <h2 class="text-[#1793d1] text-lg mb-3">$ whoami</h2>
-      <p class="text-gray-300 leading-relaxed">
-        Hello, I’m Reihenarch — a creative developer and artist who enjoys building worlds,
-        designing interfaces, and exploring the boundaries between art and code.
-      </p>
-    </section>
-
-    <!-- Skills -->
-    <section class="w-full max-w-3xl border border-[#1793d1]/40 rounded-xl p-6 mb-8">
-      <h2 class="text-[#1793d1] text-lg mb-3">$ pacman -Q skills</h2>
-      <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 text-gray-300">
-        <div class="bg-[#161821]/70 rounded-lg p-2 text-center">HTML</div>
-        <div class="bg-[#161821]/70 rounded-lg p-2 text-center">CSS / Tailwind</div>
-        <div class="bg-[#161821]/70 rounded-lg p-2 text-center">JavaScript</div>
-        <div class="bg-[#161821]/70 rounded-lg p-2 text-center">Python</div>
-        <div class="bg-[#161821]/70 rounded-lg p-2 text-center">Art & Illustration</div>
-        <div class="bg-[#161821]/70 rounded-lg p-2 text-center">Story Design</div>
+    <div class="home">
+      <div class="hometext">
+        <h2>"月光洒遍现实"</h2>
+        <h1>Creating RPG video games like no others</h1>
+        <div class="line"></div>
+        <p>
+          Reinnar is a Hoyoverse-owned subcompany with a vision to craft
+          breathtaking video games with beautiful mechanics and immersive
+          worlds.
+        </p>
       </div>
-    </section>
+    </div>
 
-    <!-- Projects -->
-    <section class="w-full max-w-3xl border border-[#1793d1]/40 rounded-xl p-6 mb-8">
-      <h2 class="text-[#1793d1] text-lg mb-3">$ ls ~/projects</h2>
-      <div class="grid sm:grid-cols-2 gap-4">
-        <div class="bg-[#161821]/70 rounded-lg p-4 text-gray-300">
-          <h3 class="text-[#1793d1] font-semibold mb-2">Retro Dashboard</h3>
-          <p class="text-sm text-gray-400">Whatever.</p>
+    <div class="about-sec">
+      <img src="starry_r-.png" />
+      <h2><i> "Luna per milia orbis terrarum splendet" </i></h2>
+      <img src="starry.png" />
+    </div>
+
+    <div class="secondview">
+      <nav class="nav2">
+        <h1>About Us</h1>
+      </nav>
+
+      <div class="background">
+        <div class="about-container">
+          <div class="parabox">
+            <p>
+              Reinnar Inc is a Hoyoverse-owned creative studio dedicated to
+              building immersive worlds and stories that transcend the
+              boundaries of traditional RPGs. Founded on the belief that emotion
+              and imagination should be at the core of every experience, Reinnar
+              brings together dreamers, artists, and engineers to shape
+              universes that feel alive—where every detail has purpose and every
+              moment tells a story.
+            </p>
+            <p>
+              Our journey began as a small team obsessed with blending fantasy,
+              philosophy, and technology. Now, under the guidance of Hoyoverse,
+              we stand at the frontier of interactive storytelling—pushing the
+              limits of visual artistry, atmospheric music, and emotionally
+              intelligent gameplay.
+            </p>
+            <p>
+              We create not just games, but worlds—places where light and shadow
+              intertwine, and where players can lose themselves in the beauty of
+              discovery. Every project we craft follows one principle:
+            </p>
+            <p>“Reality ends where imagination begins.”</p>
+          </div>
         </div>
-        <div class="bg-[#161821]/70 rounded-lg p-4 text-gray-300">
-          <h3 class="text-[#1793d1] font-semibold mb-2">Alternate History Series</h3>
-          <p class="text-sm text-gray-400">Indeddd.</p>
+        <div class="Furina">
+          <img src="FurinaBG.png" alt="Furina" />
+          <div class="furina-label"><i> Furina</i></div>
         </div>
       </div>
-    </section>
+    </div>
 
-    <!-- Contact -->
-    <section class="w-full max-w-3xl border border-[#1793d1]/40 rounded-xl p-6">
-      <h2 class="text-[#1793d1] text-lg mb-3">$ echo "Contact me"</h2>
-      <p class="text-gray-300">📧 <a href="#" class="text-[#1793d1] hover:underline">ahmadafa777.email@example.com</a></p>
-      <p class="text-gray-300 mt-2">🌐 <a href="#" class="text-[#1793d1] hover:underline">Nogithub </a></p>
-    </section>
+    <div class="line3"></div>
 
-    <!-- Footer -->
-    <footer class="mt-10 text-gray-500 text-sm">
-      <p>Honey@arch:~$ exit</p>
-    </footer>
+    <div class="about-sec">
+      <img src="starry_r-.png" />
+      <h2><i> "Inter infinitum cosmicum mare, te inveniam." </i></h2>
+      <img src="starry.png" />
+    </div>
 
-  </div>
 
-  <!-- Matrix Rain JavaScript -->
-  <script>
-    const canvas = document.getElementById('matrix');
-    const ctx = canvas.getContext('2d');
+    
+    <div class="thirdview">
+      <div class="infobox">
+        <div class="text-one">
+          <div class="line-text"></div>
+          <h2> Deishar Regency, Oskerian Republic</h2>
+        </div>
+        <div class="text-two">
+          <div class="line-text"></div>
+          <h2> Road 44th "Tannhauser"</h2>
+        </div>
+      </div>
 
-    canvas.height = window.innerHeight;
-    canvas.width = window.innerWidth;
+      <div class="information-box">
+        <div class="contact-box">
+          <h2> Contact </h2>
+          <br>
+           <div class="WA">
+            <img src="W-Logo.png">
+            <h3> +62 838-9233-8230</h3>
+           </div>
+           <br>
+           <div class="IG">
+            <img src="IG-logo.png">
+            <h3> @Reinnar-Official</h3>
+           </div>
+        </div>
+        <div class="logo-box">
 
-    const chinese = "日月金木水火土天地玄黃宇宙洪荒龍虎雲風山川海洋";
-    const fontSize = 16;
-    const columns = canvas.width / fontSize;
-    const drops = Array(Math.floor(columns)).fill(1);
+          <img src="reinnar.png">
+          
+        </div>
+      </div>
+    </div>
 
-    function draw() {
-      // Semi-transparent background to create trail
-      ctx.fillStyle = "rgba(0, 0, 0, 0.1)";
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
+  
+    <footer>© 2025 Reinnar Inc. All rights reserved.</footer>
 
-      ctx.fillStyle = "#1793d1";
-      ctx.font = fontSize + "px monospace";
+    </div>
 
-      for (let i = 0; i < drops.length; i++) {
-        const text = chinese.charAt(Math.floor(Math.random() * chinese.length));
-        ctx.fillText(text, i * fontSize, drops[i] * fontSize);
-
-        // Reset drop randomly after it goes off-screen
-        if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
-          drops[i] = 0;
-        }
-        drops[i]++;
-      }
-    }
-
-    setInterval(draw, 40);
-
-    // Handle window resizing
-    window.addEventListener('resize', () => {
-      canvas.height = window.innerHeight;
-      canvas.width = window.innerWidth;
-    });
-  </script>
-
-</body>
+  </body>
 </html>
-
 
